@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "675458597053",
+    "project_id": "helo--a-chat-application-91455",
+    "storage_bucket": "helo--a-chat-application-91455.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675458597053:android:07106e31d1b28ce87977d4",
+        "android_client_info": {
+          "package_name": "com.example.shadow.helo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675458597053-foe7d6un93l87iluv8564c5gd7rs7v30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwZoRW5IwHn0bJIH9RMy8nm7zfxIv7jro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675458597053-foe7d6un93l87iluv8564c5gd7rs7v30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
