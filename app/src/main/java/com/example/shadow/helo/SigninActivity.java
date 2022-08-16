@@ -1,14 +1,13 @@
 package com.example.shadow.helo;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.shadow.helo.Models.Users;
 import com.example.shadow.helo.databinding.ActivitySigninBinding;
@@ -43,6 +42,7 @@ public class SigninActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         auth=FirebaseAuth.getInstance();
+
         database=FirebaseDatabase.getInstance();
         progressDialog=new ProgressDialog(SigninActivity.this);
         progressDialog.setTitle("Login");
@@ -58,19 +58,19 @@ public class SigninActivity extends AppCompatActivity {
         binding.btnSignIn.setOnClickListener(view -> {
             progressDialog.show();
             auth.signInWithEmailAndPassword(binding.etEmail.getText().toString(),binding.etPassword.getText().toString()).
-                addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    progressDialog.dismiss();
-                    if(task.isSuccessful())
-                    {
-                        Intent intent=new Intent(SigninActivity.this,MainActivity.class);
-                        startActivity(intent);
-                    }
-                    else
-                        Toast.makeText(SigninActivity.this,task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            });
+                    addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            progressDialog.dismiss();
+                            if(task.isSuccessful())
+                            {
+                                Intent intent=new Intent(SigninActivity.this,MainActivity.class);
+                                startActivity(intent);
+                            }
+                            else
+                                Toast.makeText(SigninActivity.this,task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
 
         });
 

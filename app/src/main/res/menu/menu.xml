@@ -7,6 +7,10 @@
         android:title="Settings"
         />
     <item
+        android:id="@+id/groupChat"
+        android:title="Group Chat"/>
+
+    <item
         android:id="@+id/logout"
         android:title="Logout" />
 </menu>

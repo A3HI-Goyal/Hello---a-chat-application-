@@ -27,7 +27,6 @@ public class FragmentAdapter extends FragmentPagerAdapter
     {
         switch(position)
         {
-            case 0:return new ChatsFragment();
             case 1:return new StatusFragment();
             case 2:return new CallsFragment();
             default: return new ChatsFragment();

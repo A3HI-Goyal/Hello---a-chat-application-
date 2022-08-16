@@ -1,14 +1,14 @@
 package com.example.shadow.helo;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.shadow.helo.Adapters.FragmentAdapter;
 import com.example.shadow.helo.databinding.ActivityMainBinding;
@@ -59,7 +59,10 @@ public class MainActivity extends AppCompatActivity
                  Intent intent=new Intent(MainActivity.this,SigninActivity.class);
                  startActivity(intent);
                  break;
-
+            case R.id.groupChat:
+                Intent intentt = new Intent(MainActivity.this , GroupChatActivity.class);
+                startActivity(intentt);
+                break;
         }
         return true;
     }
